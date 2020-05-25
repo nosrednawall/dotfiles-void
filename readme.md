@@ -15,17 +15,17 @@
 
 I3
 ```sh
-sudo xbps-install -S i3-gaps dunst feh pasystray compton scrot NetworkManager ImageMagick
+sudo xbps-install -S i3-gaps dunst feh pasystray compton scrot NetworkManager network-manager-applet ImageMagick polybar font-unifont-bdf font-Siji
 ```
 
 Lockscreen, power manager, drivers
 ```sh
-sudo xbps-install betterlockscreen xautolock xfce4-power-manager
+sudo xbps-install betterlockscreen xautolock xfce4-power-manager AlsaMixer.app 
 ```
 
 Config themes gtk and qt
 ```sh
-sudo xbps-install lxappearance qt5ct
+sudo xbps-install lxappearance qt5ct breeze-cursors compton-conf
 ```
 
 Players
@@ -34,7 +34,7 @@ sudo xbps-install mpv mpd ncmpcpp playerctl
 ```
 ### Programas complementares
 ```sh
-sudo apt install mpv cmus fusesmb gvfs-backends thunar thunar-gtkhash materia-gtk-theme breeze-cursor-theme qbittorrent arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip dialog compton-conf libreoffice xarchiver detox geany kdeconnect moc
+sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin
 ```
 
 ### Icones e themas
@@ -51,7 +51,7 @@ mkdir -p ~/{Desktop,Documents,Downloads,Games,Videos,Musics/{animes,dramas,rock}
 
 Prmeiro instale o sct e depois abra o arquivo do crontab:
 ```sh
-sudo xbps-install -S sct
+sudo xbps-install -S sct cronie
 crontab -e
 ```
 em seguida cole as linhas abaixo no final do arquivo:

@@ -4,3 +4,20 @@ May 25 18:44 : client: [0] opened from 127.0.0.1:49400
 May 25 18:45 : client: [1] opened from 127.0.0.1:49492
 May 25 18:45 : client: [1] closed
 May 25 18:48 : client: [2] opened from 127.0.0.1:49546
+May 25 18:54 : client: [2] closed
+May 25 19:13 : client: [0] closed
+May 25 19:13 : client: [3] opened from 127.0.0.1:49724
+May 25 19:22 : client: [3] closed
+May 25 19:22 : client: [4] opened from 127.0.0.1:49872
+May 25 19:26 : client: [4] closed
+May 25 19:26 : client: [5] opened from 127.0.0.1:49886
+May 25 19:28 : client: [5] closed
+May 25 19:28 : client: [6] opened from 127.0.0.1:49888
+May 25 19:29 : client: [6] closed
+May 25 19:29 : client: [7] opened from 127.0.0.1:49892
+May 25 19:30 : client: [7] closed
+May 25 19:30 : client: [8] opened from 127.0.0.1:49894
+May 25 19:31 : client: [8] closed
+May 25 19:31 : client: [9] opened from 127.0.0.1:49902
+May 25 19:31 : client: [9] closed
+May 25 19:31 : client: [10] opened from 127.0.0.1:49904

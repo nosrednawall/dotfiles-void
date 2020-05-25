@@ -23,8 +23,8 @@ bindsym $mod+Tab exec --no-startup-id "rofi -show"
 
 # Wallpapers
 #exec --no-startup-id feh --bg-fill /home/$USER/.wallpapers/wallpaper-jojo.jpg # single wallpaper
-#exec --no-startup-id feh --bg-fill --randomize -r /home/$USER/.wallpapers/wallpapers-crunchroll/* #random wallpaper
-exec --no-startup-id /home/$USER/.wallpapers/random-wallpaper.sh
+exec --no-startup-id feh --bg-fill --randomize -r /home/$USER/.wallpapers/* #random wallpaper
+#exec --no-startup-id /home/$USER/.wallpapers/random-wallpaper.sh
 #exec --no-startup-id /usr/local/scripts/wallpaper-switcher # run a switcher wallpaper
 
 # Startup
