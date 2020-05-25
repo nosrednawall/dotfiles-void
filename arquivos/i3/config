@@ -87,9 +87,9 @@ bindsym $mod+F4 exec playerctl previous
 # Screenlock
 ########################
 # auto iniciar screenlock
-exec xautolock -time 10 -locker /bin/lock
+exec xautolock -time 10 -locker  betterlockscreen -w dim
 #atalho para screenlock
-bindsym Control+Mod1+l exec /bin/lock
+bindsym Control+Mod1+l exec betterlockscreen -l dim
 
 ########################
 # Regras para as janelas de programas no i3wm

@@ -13,10 +13,25 @@
 
 ### Instalar os programas antes de executar o script dos dotfiles, ele são:
 
+I3
 ```sh
-sudo apt install i3 i3lock dunst i3lock i3status playerctl suckless-tools git feh pasystray compton xfce4-power-manager lxappearance qt5ct xautolock xbacklight intel-microcode scrot imagemagick network-manager ttf-bitstream-vera ttf-dejavu ttf-dejavu-core ttf-dejavu-extra ttf-ancient-fonts rxvt-unicode xfonts-terminus hsetroot xsel fonts-noto fonts-mplus xsettingsd viewnior playerctl
+sudo xbps-install -S i3-gaps dunst feh pasystray compton scrot NetworkManager ImageMagick
 ```
 
+Lockscreen, power manager, drivers
+```sh
+sudo xbps-install betterlockscreen xautolock xfce4-power-manager
+```
+
+Config themes gtk and qt
+```sh
+sudo xbps-install lxappearance qt5ct
+```
+
+Players
+```sh
+sudo xbps-install mpv mpd ncmpcpp playerctl
+```
 ### Programas complementares
 ```sh
 sudo apt install mpv cmus fusesmb gvfs-backends thunar thunar-gtkhash materia-gtk-theme breeze-cursor-theme qbittorrent arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip dialog compton-conf libreoffice xarchiver detox geany kdeconnect moc
@@ -36,7 +51,7 @@ mkdir -p ~/{Desktop,Documents,Downloads,Games,Videos,Musics/{animes,dramas,rock}
 
 Prmeiro instale o sct e depois abra o arquivo do crontab:
 ```sh
-sudo apt install sct
+sudo xbps-install -S sct
 crontab -e
 ```
 em seguida cole as linhas abaixo no final do arquivo:

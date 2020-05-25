@@ -65,7 +65,15 @@
       path: arquivos/bash/bash_functions
       relink: true
       force:  true
-   
+
+    # Rofi
+    ~/.config/rofi:
+      create: true
+      glob: true
+      path: arquivos/rofi/*
+      relink: true
+      force: true
+
     # Face
     ~/.face:
       relink: true
@@ -89,6 +97,13 @@
       path: arquivos/vim/colors/*
       relink: true
       force: true
+    
 
+    ~/.config/betterlockscreen:
+      create: true
+      glob: true
+      path: arquivos/betterlockscreen/*
+      relink: true
+      force: true
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
