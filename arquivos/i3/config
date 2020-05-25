@@ -35,6 +35,7 @@ exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nm-applet &
 exec --no-startup-id numlockx on
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
+exec --no-startup-id mpd
 
 ############################
 # Printscreen

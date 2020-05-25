@@ -21,3 +21,10 @@ May 25 19:31 : client: [8] closed
 May 25 19:31 : client: [9] opened from 127.0.0.1:49902
 May 25 19:31 : client: [9] closed
 May 25 19:31 : client: [10] opened from 127.0.0.1:49904
+May 25 19:43 : client: [10] closed
+May 25 19:43 : avahi: Client Disconnected, will reconnect shortly
+May 25 19:43 : avahi: Could not reconnect: Daemon not running
+May 25 19:47 : client: [0] opened from 127.0.0.1:47580
+May 25 19:48 : client: [1] opened from 127.0.0.1:47582
+May 25 19:48 : client: [1] closed
+May 25 19:48 : client: [0] closed
