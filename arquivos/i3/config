@@ -13,7 +13,6 @@ font pango:monospace 8
 ###################
 # start a terminal
 bindsym $mod+Return exec st
-#bindsym $mod+Return exec xfce4-terminal
 
 # start rofi and passmenu (a program launcher)
 bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
@@ -22,13 +21,10 @@ bindsym $mod+Shift+D exec passmenu
 bindsym $mod+Tab exec --no-startup-id "rofi -show"
 
 # Wallpapers
-#exec --no-startup-id feh --bg-fill /home/$USER/.wallpapers/wallpaper-jojo.jpg # single wallpaper
-exec --no-startup-id feh --bg-fill --randomize -r /home/$USER/.wallpapers/* #random wallpaper
-#exec --no-startup-id /home/$USER/.wallpapers/random-wallpaper.sh
-#exec --no-startup-id /usr/local/scripts/wallpaper-switcher # run a switcher wallpaper
+exec --no-startup-id feh --bg-fill --randomize -r /home/$USER/.wallpapers/*
 
 # Startup
-exec --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc 
+exec --no-startup-id picom & 
 exec --no-startup-id pasystray &
 exec --no-startup-id xfce4-clipman &
 exec --no-startup-id xfce4-power-manager &

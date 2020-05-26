@@ -15,7 +15,7 @@
 
 I3
 ```sh
-sudo xbps-install -S i3-gaps dunst feh pasystray compton scrot NetworkManager network-manager-applet ImageMagick polybar font-unifont-bdf font-Siji
+sudo xbps-install -S i3-gaps dunst feh pasystray picom scrot NetworkManager network-manager-applet ImageMagick polybar font-unifont-bdf font-Siji alsa-utils
 ```
 
 Lockscreen, power manager, drivers
@@ -25,7 +25,11 @@ sudo xbps-install betterlockscreen xautolock xfce4-power-manager AlsaMixer.app
 
 Config themes gtk and qt
 ```sh
-sudo xbps-install lxappearance qt5ct breeze-cursors compton-conf
+sudo xbps-install lxappearance qt5ct breeze-cursors compton-conf papirus-folders papirus-icon-theme  
+```
+For qt aplications on gtk add line on /etc/environment
+```sh
+QT_QPA_PLATFORMTHEME=gtk2
 ```
 
 Players
@@ -34,9 +38,14 @@ sudo xbps-install mpv mpd ncmpcpp playerctl
 ```
 ### Programas complementares
 ```sh
-sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin
+sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
 ```
-
+Pass and QtPass
+```sh
+sudo xbps-install pass qtpass gpg2 xclip pinentry pinentry-gtk pinentry-tty
+# Caso o pinetry não funcione rode o comando abaixo após instalar os dotfiles
+gpg-connect-agent reloadagent /bye
+```
 ### Icones e themas
 ```sh
 wget -qO- https://git.io/papirus-icon-theme-install | sh

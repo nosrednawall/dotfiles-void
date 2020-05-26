@@ -119,5 +119,14 @@
       path: arquivos/ncmpcpp/*
       relink: true
       force: true
+    
+    # GPG pinetry gtk
+    ~/.gnupg/gpg-agent.conf:
+      create: true
+      glob: true
+      path: arquivos/gpg-pinetry-gtk-2/gpg-agent.conf
+      relink: true
+      force: true
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
