@@ -45,3 +45,11 @@ May 26 18:00 : client: [0] closed
 May 26 18:00 : avahi: Client Disconnected, will reconnect shortly
 May 26 18:00 : avahi: Could not reconnect: Daemon not running
 May 26 18:00 : client: [0] opened from 127.0.0.1:50948
+May 26 18:45 : client: [0] closed
+May 26 18:45 : client: [1] opened from 127.0.0.1:51146
+May 26 18:46 : client: [1] closed
+May 26 18:47 : avahi: Client Disconnected, will reconnect shortly
+May 26 18:47 : avahi: Could not reconnect: Daemon not running
+May 27 15:38 : client: [0] opened from 127.0.0.1:60572
+May 27 15:43 : client: [1] opened from 127.0.0.1:60832
+May 27 15:43 : client: [1] closed

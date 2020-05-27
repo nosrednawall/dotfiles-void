@@ -5,13 +5,6 @@
 # Music
 alias mocp='mocp -T transparent-background'
 
-# Apt
-alias upgrade='sudo apt update && sudo apt upgrade -y'
-alias install='sudo apt install'
-alias search='sudo apt search'
-alias purge='sudo apt purge'
-alias autoremove='sudo apt autoremove'
-
 # Dotfiles
 alias dotfiles_backup='cd ~/.dotfiles && git add . && git commit -m "backup automático" && git push && cd ~'
 
@@ -43,3 +36,7 @@ alias vim="vim -c 'startinsert'"
 # Minidlna
 alias startdlna='sudo systemctl start minidlna.service'
 alias stopdlna='sudo systemctl stop minidlna.service'
+
+# Sysadmin
+alias listar_usuarios_logados='awk -F";" '{for(i=1;i<=NF;i++){if ($i !~ /nologin/){print $1}}}' /etc/passwd'
+alias listar_usuarios_ativos='awk -F";" '{for(i=1;i<=NF;i++){if ($i !~ /false/){print $1}}}' /etc/passwd'
