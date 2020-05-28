@@ -12,7 +12,7 @@ font pango:monospace 8
 # Prograns
 ###################
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec urxvt
 
 # start rofi and passmenu (a program launcher)
 bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
@@ -119,15 +119,7 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 
 #  strip_workspace_numbers yes
 #  strip_workspace_name yes
-#  colors {
-#    separator #586e75
-#    background #002b36
-#    statusline #aea79f
-#    focused_workspace #586e75 #586e75 #ffffff
-#    active_workspace #073642 #073642 #ffffff
-#    inactive_workspace #002b36 #002b36 #aea79f
-#    urgent_workspace #77216f #77216f #ffffff
-#  }
+#
 #}
 
 ###################
@@ -227,8 +219,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # move workspaces on specific screens
-workspace 1 output VGA-0
-workspace 2 output VGA-0
+#workspace 1 output VGA-0
+#workspace 2 output VGA-0
 #workspace 3 output VGA-0
 #workspace 1 output VGA-0
 
@@ -236,7 +228,7 @@ workspace 2 output VGA-0
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r restart 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -266,11 +258,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+##### i3-gaps ##############
+for_window [class=".*"] border pixel 3 #*
+gaps inner 4
+gaps outer 1
+gaps horizontal 2
+
 #########################
 # Theme
 #########################
-
-client.focused #586e75 #586e75 #fdf6e3 #268bd2
-client.focused_inactive #073642 #073642 #93a1a1 #002b36
-client.unfocused #002b36 #002b36 #586e75 #002b36
-client.urgent #dc322f #dc322f #fdf6e3 #dc322f
+client.focused #859900 #859900 #fdf6e3 #6c71c4
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
