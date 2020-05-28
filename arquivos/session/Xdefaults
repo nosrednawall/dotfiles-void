@@ -9,14 +9,11 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*scrollstyle: plaind
 
-#Xterm*VT100.selectToClipboard: true
-#Xterm*VT100.translations: #override \
-#Shift<BtnUp>: select-end(CLIPBOARD) \n\
+#URxvt.keysym.Control-Meta-c: builtin-string:
+#URxvt.keysym.Control-Meta-v: builtin-string:
 
-Xterm*VT100.selectToClipboard: true
-Xterm*VT100.translations: #override \
-      Shift<Ctrl>: select-end(CLIPBOARD) \n\
-      <Ctrl>V: insert-selection(CLIPBOARD,CUT_BUFFER0) 
+#URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+#URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 ####################
 # Fonts
