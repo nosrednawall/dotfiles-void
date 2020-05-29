@@ -40,3 +40,6 @@ alias stopdlna='sudo systemctl stop minidlna.service'
 # Sysadmin
 alias listar_usuarios_logados='awk -F";" "{for(i=1;i<=NF;i++){if ($i !~ /nologin/){print $1}}}" /etc/passwd'
 alias listar_usuarios_ativos='awk -F";" "{for(i=1;i<=NF;i++){if ($i !~ /false/){print $1}}}" /etc/passwd'
+
+# Lockscreen
+alias betterlockscreen_i3='betterlockscreen -l dim'
