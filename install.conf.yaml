@@ -157,5 +157,12 @@
       relink: true
       force: true
 
+    ~/.config/xfce4/terminal:
+      create: true
+      glob: true
+      path: arquivos/xfce-terminal/*
+      relink: true
+      force: true
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

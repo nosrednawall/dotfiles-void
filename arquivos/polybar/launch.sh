@@ -7,15 +7,14 @@
 pkill -x polybar
 
 # Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-#if type "xrandr"; then
-#  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-#        MONITOR=$m polybar ~/.config/polybar/config main &
-#          done
-#        else
-#            polybar ~/.config/polybar/config  main &
-#fi
+while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
-polybar -c ~/.config/polybar/config main &
+DISPLAY1="$(xrandr -q | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
+[ ! -z "$DISPLAY1" ] && MONITOR="$DISPLAY1" polybar top1 &
+
+DISPLAY2="$(xrandr -q | grep 'HDMI1\|DVI-I-1' | cut -d ' ' -f1)"
+[ ! -z $DISPLAY2 ] && MONITOR=$DISPLAY2 polybar top2 &
+
+# Launch bar1 and bar2
+#polybar -c ~/.config/polybar/config main &
