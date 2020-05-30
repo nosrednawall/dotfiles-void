@@ -150,5 +150,12 @@
       relink: true
       force: true
 
+    ~/.config/fontconfig/fonts.conf:
+      create: true
+      glob: true
+      path: arquivos/fontconfig/fonts.conf
+      relink: true
+      force: true
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
