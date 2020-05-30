@@ -15,7 +15,7 @@
 
 I3
 ```sh
-sudo xbps-install -S i3-gaps dunst feh pasystray picom scrot NetworkManager network-manager-applet ImageMagick polybar font-unifont-bdf font-Siji alsa-utils
+sudo xbps-install -S i3-gaps dunst feh pasystray picom scrot NetworkManager network-manager-applet ImageMagick polybar font-unifont-bdf font-Siji alsa-utils dunst
 ```
 
 Lockscreen, power manager, drivers

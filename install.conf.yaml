@@ -127,6 +127,14 @@
       path: arquivos/gpg-pinetry-gtk-2/gpg-agent.conf
       relink: true
       force: true
+    
+    # Dunst
+    ~/.config/dunst/dunstrc:
+      create: true
+      glob: true
+      path: arquivos/dunst/dunstrc
+      relink: true
+      force: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
