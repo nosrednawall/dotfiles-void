@@ -142,5 +142,13 @@
       relink: true
       force: true
 
+    # Picom
+    ~/.config/picom/picomrc:
+      create: true
+      glob: true
+      path: arquivos/picom/picomrc
+      relink: true
+      force: true
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
