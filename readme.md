@@ -55,7 +55,13 @@ wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/materia-kde/m
 ```sh
 mkdir -p ~/{Desktop,Documents,Downloads,Games,Videos,Musics/{animes,dramas,rock},Pictures/{abstratas,fotos,paisagens,wallpapers,ScreenShots},git,.programas,Podcasts}
 ```
-
+### Timezone and Hardware clock on void
+credits:https://docs.voidlinux.org/config/date-time.html
+```sh
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+#add line below on /etc/rc.conf
+HARDWARECLOCK=localtime
+```
 ### Bonus:Como diminuir a luz azul do monitor
 
 Prmeiro instale o sct e depois abra o arquivo do crontab:

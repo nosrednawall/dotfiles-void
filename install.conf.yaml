@@ -22,7 +22,13 @@
 
     ~/.xsession:
       create: true
-      path: arquivos/session/xsession
+      path: arquivos/session/xinitrc
+      relink: true
+      force: true
+
+    ~/.profile:
+      create: true
+      path: arquivos/session/xinitrc
       relink: true
       force: true
 
@@ -129,10 +135,10 @@
       force: true
     
     # Dunst
-    ~/.config/dunst/dunstrc:
+    ~/.config/dunst:
       create: true
       glob: true
-      path: arquivos/dunst/dunstrc
+      path: arquivos/dunst/*
       relink: true
       force: true
 
