@@ -28,6 +28,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+;#######################################################################
 [bar/top1]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
@@ -58,7 +59,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right =  date powermenu
 
 tray-position = 
 tray-padding = 2
@@ -77,6 +78,8 @@ wm-restack = i3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+;#######################################################################
 
 [bar/top2]
 monitor = ${env:MONITOR:HDMI1}
@@ -127,6 +130,112 @@ wm-restack = i3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+;#######################################################################
+
+[bar/bottom1]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = xbacklight pulseaudio wlan 
+modules-center =
+modules-right = filesystem  memory cpu  eth battery temperature xkeyboard
+
+tray-position = center
+tray-padding = 2
+;tray-background = #0063ff
+
+wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;#######################################################################
+
+[bar/bottom2]
+monitor = ${env:MONITOR:HDMI1}
+width = 100%
+height = 20
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = xbacklight pulseaudio 
+modules-center = wlan eth
+modules-right = filesystem  memory cpu  eth battery temperature xkeyboard
+
+tray-position = left
+tray-padding = 2
+;tray-background = #0063ff
+
+wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;#######################################################################
 
 [module/xwindow]
 type = internal/xwindow
