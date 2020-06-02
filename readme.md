@@ -11,6 +11,27 @@
                    \|_________\|_________| 
 ```
 
+## Pós instalação Void Linux
+```sh
+su
+xbps-install -Suv
+find /usr/share/kbd/keymaps/ -type f
+sed -i -e "s|#\?KEYMAP=.*|KEYMAP=br-abnt2|"  /etc/rc.conf
+xbps-install -S elogind
+ln -srf /etc/sv/{dbus,polkitd,elogind} /var/service
+ln -s /etc/sv/dhcpcd /var/service/dhcpcd
+useradd -m -s /bin/bash -U -G wheel,users,audio,video,cdrom,input voiduser
+passwd voiduser
+xbps-install -S xorg xterm
+```
+
+#### Display Manager
+```sh
+su
+xbps-install -S lightdm lightdm-gtk3-greeter
+ln -s /etc/sv/dbus /var/service/dbus
+ln -s /etc/sv/lightdm /var/service/lightdm
+```
 ### Instalar os programas antes de executar o script dos dotfiles, ele são:
 
 I3
@@ -38,7 +59,7 @@ sudo xbps-install mpv mpd ncmpcpp playerctl
 ```
 ### Programas complementares
 ```sh
-sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
+sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
 ```
 Pass and QtPass
 ```sh

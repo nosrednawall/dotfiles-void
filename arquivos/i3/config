@@ -86,8 +86,8 @@ bindsym $mod+F4 exec playerctl previous
 ########################
 # auto iniciar screenlock
 # I have a alias for betterlockscreen
-#exec xautolock -time 10 -locker betterlockscreen_i3
-exec --no-startup-id betterlockscreen -w dim
+exec xautolock -time 10 -locker betterlockscreen_i3
+
 #atalho para screenlock
 bindsym $mod+shift+x exec betterlockscreen -l dim
 
