@@ -28,9 +28,9 @@ xbps-install -S xorg xterm
 #### Display Manager
 ```sh
 su
-xbps-install -S lightdm lightdm-gtk3-greeter
+xbps-install -S slim
 ln -s /etc/sv/dbus /var/service/dbus
-ln -s /etc/sv/lightdm /var/service/lightdm
+ln -s /etc/sv/slim /var/service/slim
 ```
 ### Instalar os programas antes de executar o script dos dotfiles, ele são:
 
@@ -59,7 +59,7 @@ sudo xbps-install mpv mpd ncmpcpp playerctl
 ```
 ### Programas complementares
 ```sh
-sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
+sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs gvfs-cdda gvfs-mtp gvfs-smb gvfs-gphoto2 tumbler qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
 ```
 Pass and QtPass
 ```sh
