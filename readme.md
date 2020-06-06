@@ -59,7 +59,7 @@ sudo xbps-install mpv mpd ncmpcpp playerctl
 ```
 ### Programas complementares
 ```sh
-sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs gvfs-cdda gvfs-mtp gvfs-smb gvfs-gphoto2 tumbler qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
+sudo xbps-install thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs gvfs-cdda gvfs-mtp gvfs-smb gvfs-gphoto2 udiskie udisks2 tumbler qbittorrent cabextract p7zip p7zip-urar unrar unzip zip dialog gtkdialog libreoffice libreoffice-i18n-pt-BR xarchiver detox geany xfce4-clipman-plugin xfce4-screenshooter
 ```
 Pass and QtPass
 ```sh
