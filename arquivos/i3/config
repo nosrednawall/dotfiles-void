@@ -6,7 +6,7 @@ set $mod Mod4
 ###################
 # Fonts
 ###################
-font pango:monospace 8
+font pango:monospace 8 
 
 ###################
 # Prograns
@@ -102,7 +102,19 @@ for_window [class="Xfce4-appfinder"] floating enable
 #########################
 # Multi monitor
 #########################
-bindsym $mod+p move workspace to output right
+#bindsym $mod+p move workspace to output right
+
+mode "$mode_multi_monitor" {
+    bindsym 1 exec xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --off --output VIRTUAL1 --off
+    bindsym 2 exec xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate normal --output VIRTUAL1 --off && sh ~/.dotfiles/arquivos/i3/restart-i3.sh
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+set $mode_multi_monitor Launch: [1]Um [2]Dois
+bindsym $mod+p mode "$mode_multi_monitor"
+
 
 #########################
 # Bar

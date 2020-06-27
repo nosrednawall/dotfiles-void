@@ -52,8 +52,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Weather Icons:size=10;1
 
-modules-left = i3 mpd
-modules-center = 
+modules-left = i3 mpd spotify
+modules-center = xwindow 
 modules-right = date powermenu 
 
 ;tray-position = center
@@ -113,7 +113,7 @@ font-2 = siji:pixelsize=10;1
 font-3 = Weather Icons:size=10;1
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = date powermenu
 
 ;tray-position = center
@@ -173,7 +173,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Weather Icons:size=10;1
 
-modules-left = xbacklight pulseaudio wlan 
+modules-left = xbacklight pulseaudio  mangas
 modules-center =
 modules-right = updates-xbps filesystem  memory cpu temperature eth battery  xkeyboard openweathermap-forecast 
 
@@ -291,12 +291,20 @@ label-urgent-padding = 2
 ; Scripts
 ;#######################################################################
 
+[module/mangas]
+type = custom/script
+interval = 60
+format-prefix = "# "
+format = <label>
+exec = /home/anderson/.local/scripts/MangaUpdates/manga-updates.sh -p
+format-underline = #1db954
+
 [module/spotify]
 type = custom/script
 interval = 1
 format-prefix = " "
 format = <label>
-exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
+exec = python ~/.dotfiles/arquivos/polybar/scripts/spotify/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
 
 [module/openweathermap-fullfeatured]
@@ -304,17 +312,20 @@ type = custom/script
 exec = ~/.config/polybar/scripts/openweathermap-fullfeatured.sh
 interval = 600
 label-font = 3
+format-underline = #1db912
 
 [module/openweathermap-forecast]
 type = custom/script
 exec = ~/.config/polybar/scripts/openweathermap-forecast.sh
 interval = 600
 label-font = 3
+format-underline = #1db912
 
 [module/updates-xbps]
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-xbps.sh
 interval = 20
+format-underline = #1db912
 
 ;#######################################################################
 ; Padrão
