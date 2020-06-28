@@ -52,9 +52,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Weather Icons:size=10;1
 
-modules-left = i3 mpd spotify
-modules-center = xwindow 
-modules-right = date powermenu 
+modules-left = i3 xwindow
+modules-center = mpd
+modules-right = spotify date powermenu 
 
 ;tray-position = center
 ;tray-detached = false

@@ -43,3 +43,6 @@ alias listar_usuarios_ativos='awk -F";" "{for(i=1;i<=NF;i++){if ($i !~ /false/){
 
 # Lockscreen
 alias betterlockscreen_i3='betterlockscreen -l dim'
+
+# htop
+alias urxvt_htop='urxvt -e htop'
