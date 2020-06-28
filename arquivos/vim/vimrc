@@ -103,6 +103,9 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " colorscheme Tomorrow-Night
 " colorscheme twilight256
 syntax enable
-colorscheme monokai
+"colorscheme monokai
 hi Normal ctermbg=none
 
+packadd! dracula
+syntax enable
+colorscheme dracula

@@ -33,7 +33,7 @@ bindsym $mod+Shift+w exec feh --bg-fill --randomize -r /home/$USER/.wallpapers/*
 exec --no-startup-id picom --config ~/.config/picom/picomrc &
 exec --no-startup-id pasystray &
 exec --no-startup-id xfce4-clipman &
-exec --no-startup-id sleep 3 &amp;&amp; xfce4-power-manager &
+exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nm-applet &
 #exec --no-startup-id numlockx on
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc &
