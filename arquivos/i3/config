@@ -6,7 +6,7 @@ set $mod Mod4
 ###################
 # Fonts
 ###################
-font pango:monospace 8 
+font pango:terminus 10 
 
 ###################
 # Prograns
@@ -17,11 +17,12 @@ bindsym $mod+Return exec xfce4-terminal
 # htop (mod+alt+h)
 bindsym $mod+Shift+h exec --no-startup-id urxvt -geometry 80x26 -name "floating_urxvt" -e 'htop'
 
-# start rofi and passmenu (a program launcher)
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
-bindsym $mod+Shift+D exec passmenu
+# Rofi
+bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'terminus 10' -show-icons
+# Passmenu
+bindsym $mod+Shift+d exec "passmenu -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'terminus-10' -p 'pass#'"
 # like Alt-tab
-bindsym $mod+Tab exec --no-startup-id "rofi -show"
+bindsym $mod+Tab exec --no-startup-id "rofi -show window -show-icons"
 
 # Wallpapers
 exec --no-startup-id feh --bg-fill --randomize -r /home/$USER/.wallpapers/*
@@ -104,8 +105,7 @@ for_window [class="URxvt" instance="floating_urxvt$"] floating toggle
 #########################
 # Multi monitor
 #########################
-#bindsym $mod+p move workspace to output right
-
+bindsym $mod+Mod0+p move workspace to output right
 mode "$mode_multi_monitor" {
     bindsym 1 exec xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --off --output VIRTUAL1 --off
     bindsym 2 exec xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate normal --output VIRTUAL1 --off && sh ~/.dotfiles/arquivos/i3/restart-i3.sh
@@ -138,7 +138,19 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 
 #  strip_workspace_numbers yes
 #  strip_workspace_name yes
-#
+
+#  colors {
+#    background #282A36
+#    statusline #F8F8F2
+#    separator  #44475A
+
+#    focused_workspace  #44475A #44475A #F8F8F2
+#    active_workspace   #282A36 #44475A #F8F8F2
+#    inactive_workspace #282A36 #282A36 #BFBFBF
+#    urgent_workspace   #FF5555 #FF5555 #F8F8F2
+#    binding_mode       #FF5555 #FF5555 #F8F8F2
+#  }
+
 #}
 
 ###################
@@ -286,7 +298,16 @@ gaps horizontal 2
 #########################
 # Theme
 #########################
-client.focused #859900 #859900 #fdf6e3 #6c71c4
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+#client.focused #859900 #859900 #fdf6e3 #6c71c4
+#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+#client.unfocused #073642 #073642 #93a1a1 #586e75
+#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+#
+client.background       #F8F8F2
