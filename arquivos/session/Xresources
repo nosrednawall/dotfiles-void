@@ -17,3 +17,7 @@
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+*Rxvt.perl-ext-common:  default,clipboard,url-select,resize-font
+*Rxvt.keysym.Shift-Control-C:       perl:clipboard:copy
+*Rxvt.keysym.Shift-Control-V:       perl:clipboard:paste

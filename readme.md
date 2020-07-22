@@ -41,7 +41,7 @@ sudo xbps-install -S i3-gaps dunst feh pasystray picom scrot NetworkManager netw
 
 Lockscreen, power manager, drivers
 ```sh
-sudo xbps-install betterlockscreen xautolock xfce4-power-manager AlsaMixer.app 
+sudo xbps-install betterlockscreen xautolock xfce4-power-manager upower  AlsaMixer.app 
 ```
 
 Config themes gtk and qt
