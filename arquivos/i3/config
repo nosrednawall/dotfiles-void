@@ -53,6 +53,9 @@ bindsym $mod+Shift+s exec xfce4-screenshooter -r -c -s $HOME/Imagens/Screenshoot
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightnes
 
+bindsym $mod+Shift+n exec "sct 4500"
+bindsym $mod+Shift+m exec "sct"
+
 ######################
 # Pulse Audio controls
 ######################
