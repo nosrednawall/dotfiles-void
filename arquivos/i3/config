@@ -35,7 +35,7 @@ exec --no-startup-id pasystray &
 exec --no-startup-id xfce4-clipman &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id nm-applet &
-#exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc &
 exec --no-startup-id mpd
 
@@ -126,36 +126,6 @@ bindsym $mod+p mode "$mode_multi_monitor"
 # Bar
 #########################
 exec --no-startup-id ~/.config/polybar/launch.sh
-#bar {
-#  font pango:monospace 8
-#  status_command i3status -c ~/.config/i3/i3status.conf -t
-
-  #mode hide
-  #hidden_state hide
-  #modifier $mod
-  
-#  tray_output HDMI-0
-#  tray_output eDP1
-#  separator_symbol ":|:"
-
-#  workspace_buttons yes
-
-#  strip_workspace_numbers yes
-#  strip_workspace_name yes
-
-#  colors {
-#    background #282A36
-#    statusline #F8F8F2
-#    separator  #44475A
-
-#    focused_workspace  #44475A #44475A #F8F8F2
-#    active_workspace   #282A36 #44475A #F8F8F2
-#    inactive_workspace #282A36 #282A36 #BFBFBF
-#    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-#    binding_mode       #FF5555 #FF5555 #F8F8F2
-#  }
-
-#}
 
 ###################
 # Controls i3
@@ -218,16 +188,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "I"
+set $ws2 "II"
+set $ws3 "III"
+set $ws4 "IV"
+set $ws5 "V"
+set $ws6 "VI"
+set $ws7 "VII"
+set $ws8 "VIII"
+set $ws9 "IX"
+set $ws10 "X"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -257,7 +227,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 workspace 1 output eDP1
 workspace 2 output eDP1
 workspace 3 output eDP1
-workspace 1 output eDP1
 
 
 # reload the configuration file

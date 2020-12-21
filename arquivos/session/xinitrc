@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -43,10 +43,7 @@ xset -b
 xrdb -merge ~/.Xresources
 
 # Multi monitor
-xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
+#xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
 
 #Iniciar o i3
-#if [ "$(command -v i3)" >/dev/null 2>&1 ];
-#then 
 exec dbus-launch i3 
-#exec ck-launch-session dbus-launch --sh-syntax --exit-with-x11 i3;

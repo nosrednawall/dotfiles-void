@@ -104,14 +104,6 @@
       relink: true
       force: true
     
-    # Betterlockscreen
-    ~/.config/betterlockscreen:
-      create: true
-      glob: true
-      path: arquivos/betterlockscreen/*
-      relink: true
-      force: true
-
     # Music on mpd and ncmpcpp
     ~/.config/mpd:
       create: true
